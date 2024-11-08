@@ -1,0 +1,433 @@
+:root {
+    --color-principal: #44a966; 
+    --color-secundario: #00672b; 
+    --color-fondo: #ffffff;
+    --color-texto: #000000; 
+    --color-texto-navbar: #ffffff; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    font-family: 'Roboto', sans-serif; /* Usar fuente Roboto */
+}
+
+.navbar {
+    background-color: var(--color-principal);
+}
+
+.navbar-nav .nav-link {
+    color: var(--color-texto-navbar); /* Cambiar color del texto de la navegación a blanco */
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--color-secundario); /* Color al pasar el mouse */
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center; 
+}
+
+.logo-nav {
+    max-width: 90px; /* tamaño del logo*/
+    margin-right: 10px; 
+}
+
+.hero-section {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    animation: slide 10s infinite; /* Duración de la animación */
+}
+
+@keyframes slide {
+    0% { background-image: url('imagenes/casa1.jpg'); }
+    50% { background-image: url('imagenes/casa1.jpg'); }
+    51% { background-image: url('imagenes/casa2.jpg'); }
+    100% { background-image: url('imagenes/casa2.jpg'); }
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5); 
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.container {
+    z-index: 2;
+    text-align: center;
+}
+
+.hero-text {
+    font-size: 4rem; 
+    font-weight: bold;
+    color: #FFFFFF; 
+    margin-bottom: 20px; 
+}
+
+.btn-primary {
+    background-color: var(--color-secundario);
+    border-color: var(--color-secundario);
+    font-size: 1.5rem; 
+    padding: 10px 20px; 
+}
+
+.btn-primary:hover {
+    background-color: var(--color-principal);
+    border-color: var(--color-principal);
+}
+
+.quienes-somos {
+    background-image: url('imagenes/agua.jpg');
+    background-size: cover; 
+    background-position: center;
+    color: white; 
+    position: relative; 
+    z-index: 1; 
+}
+
+.quienes-somos .container {
+    position: relative; 
+    z-index: 2; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 25px; 
+    border-radius: 10px; 
+}
+
+
+.departamentos h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--color-principal);
+}
+
+.card {
+    margin-bottom: 30px;
+    max-height: 550px;
+    overflow: hidden; 
+}
+
+.card-img-top {
+    height: 200px; 
+    object-fit: cover; 
+}
+
+.card-body {
+    text-align: center;
+    padding: 13px;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color-principal);
+}
+
+.card-text {
+    font-size: 1.1rem;
+}
+
+.carousel-item img {
+    width: 100%; 
+    height: 300px; 
+    object-fit: cover; 
+}
+
+.text-container {
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.text-container p {
+    color: #060606; 
+    font-size: 1.2rem; 
+    line-height: 1.6; 
+}
+.comodidades {
+    background-color: var(--color-secundario);
+    padding: 30px 0; 
+}
+
+.comodidades h2 {
+    color: var(--color-fondo);
+    font-size: 2.5rem;
+    margin-bottom: 10px; 
+}
+
+.comodidades p {
+    color: var(--color-fondo);
+    font-size: 1.2rem; 
+    margin-bottom: 40px;
+}
+
+.icon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.icon-container i {
+    color: var(--color-fondo);
+    font-size: 50px; 
+    margin-bottom: 10px;
+}
+/* Estilo del contenedor de la sección */
+#actividades {
+    background-color: #F0F8F5; /* Fondo verde claro */
+    padding: 60px 0;
+}
+
+/* Estilos del título y subtítulo */
+.seccion-titulo {
+    color: #2E8B57; /* Verde bosque */
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.seccion-subtitulo {
+    color: #666;
+    font-size: 1.1em;
+}
+
+/* Imagen con borde redondeado y sombra */
+.imagen-contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.actividad-imagen {
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    max-width: 100%;
+}
+
+/* Estilo del recuadro de texto */
+.actividad-recuadro {
+    background-color: rgba(46, 139, 87, 0.85); /* Verde bosque con transparencia */
+    color: #FFFFFF; /* Texto blanco */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    margin-top: 20px;
+}
+.actividad-recuadro h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #4B4B4B; /* gris oscuro */
+}
+
+
+.actividad-recuadro p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+.ubicacion {
+    background-color: #f9f9f9;
+    padding: 40px 0;
+}
+
+.ubicacion h2 {
+    color: #2e7d32;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.ubicacion p {
+    color: #333;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.map-container {
+    margin-top: 30px;
+}
+
+iframe {
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+/* Contenedor de la sección de reservas */
+#reservas {
+    padding: 40px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+}
+
+/* Título de la sección */
+#reservas h2 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Estilo de los campos del formulario */
+#form-reserva .form-label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+#form-reserva .form-control {
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    font-size: 1rem;
+    width: 100%;
+    margin-bottom: 15px;
+    transition: border-color 0.3s ease;
+}
+
+#form-reserva .form-control:focus {
+    border-color: #28a745;
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
+}
+
+/*  botones */
+#form-reserva .btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1rem;
+    border-radius: 5px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+#form-reserva .btn:hover {
+    background-color: #218838;
+}
+
+
+@media (max-width: 768px) {
+    #reservas {
+        padding: 20px;
+    }
+
+    #form-reserva .form-control, 
+    #form-reserva .btn {
+        width: 100%;
+        font-size: 1rem;
+    }
+}
+
+/* Mensaje de error */
+.alert {
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.alert.success {
+    background-color: #2ecc71;
+}
+
+.alert.error {
+    background-color: #e74c3c;
+}
+
+/* Formulario */
+#miFormulario {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #e6e6e6;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#miFormulario h2 {
+    text-align: center;
+    color: #55aa73; /* Verde bosque */
+    font-family: 'Roboto', sans-serif;
+}
+
+#miFormulario label {
+    font-weight: bold;
+    color: #040404;
+    font-family: 'Roboto', sans-serif;
+}
+
+#miFormulario input[type="text"],
+#miFormulario input[type="email"],
+#miFormulario input[type="tel"],
+#miFormulario input[type="date"],
+#miFormulario input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #7ed480;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+#miFormulario input[type="text"]:focus,
+#miFormulario input[type="email"]:focus,
+#miFormulario input[type="tel"]:focus,
+#miFormulario input[type="date"]:focus,
+#miFormulario input[type="number"]:focus {
+    outline: none;
+    border-color: #2e6f45; 
+    box-shadow: 0 0 5px rgba(46, 111, 69, 0.3);
+}
+
+#miFormulario button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #ffa500; 
+    color: #fff;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#miFormulario button[type="submit"]:hover {
+    background-color: #ff8c00;
+}
+
+#miFormulario button[type="submit"]:active {
+    background-color: #ff7f00;
+}
+
+
+
+
+
